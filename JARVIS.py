@@ -77,8 +77,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('khullar.anmol24@gmail.com', 'agpltiqlwlxcfkip')
-    server.sendmail('khullar.anmol24@gmail.com', to, content)
+    server.login('your email id', 'your login code')
+    server.sendmail('your email id', to, content)
     server.close()
 
 URL = 'https://www.way2sms.com/api/v1/sendCampaign'
@@ -225,7 +225,7 @@ if __name__ == "__main__":
                 if x == 'yes':
                     speak("enter the message you want to send")
                     messages = takeCommand()
-                    response = sendPostRequest(URL, 'XRYZNSRDHPJKIAIPEKK1V2E6KCVPZ0R6', 'CODMTW1JTAI03FVL', 'prod', number, 'khullar.anmol24@gmail.com', messages )
+                    response = sendPostRequest(URL, 'your code', 'your code', 'prod', number, 'your email id', messages )
                     print (response.text)
                     speak("message sent")
                     x = False
